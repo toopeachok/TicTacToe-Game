@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  display: block;
+  list-style: none;
+}
+
+.field-box {
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  display: grid;
+  background: #cccccc;
+
+  position: relative;
+}
+
+.cell {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  border: 1px solid darkslategrey;
+  cursor: pointer;
+
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  font-family: Roboto, serif;
+  color: darkorange;
+  text-align: center;
+
+  transition: background .1s ease-in;
+
+  &:hover {
+    background: #ffffff;
+  }
+}
+
+.result-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  text-transform: uppercase;
+}
+
+.result-overlay--active {
+  z-index: 10;
+  background: rgba(lightslategrey, .5);
+}
