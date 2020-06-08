@@ -67,11 +67,14 @@ ul, ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: green;
+  color: transparent;
   text-transform: uppercase;
 }
 
 .result-overlay--active {
+  color: #008000;
   z-index: 10;
   background: rgba(lightslategrey, .5);
 }
+
+@import "media";
