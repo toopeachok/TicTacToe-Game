@@ -46,16 +46,8 @@ const cssLoaders = extra => {
 
 const filename = ext => {
   let filename = '';
-  if (ext === 'html') {
-    isDev ? filename = `index.${ext}`
-      : filename = `index.[hash].${ext}`;
-    return filename;
-  } else {
-    isDev ? filename = `[name].${ext}`
-      : filename = `[name].[hash].${ext}`;
-    return filename;
-  }
-
+  isDev ? filename = `[name].${ext}` : filename = `[name].[hash].${ext}`;
+  return filename;
 };
 
 module.exports = {
@@ -81,7 +73,6 @@ module.exports = {
       minify: {
         collapseWhitespace: isProd
       },
-      filename: filename('html')
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(
